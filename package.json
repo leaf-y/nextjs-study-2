@@ -3,7 +3,11 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "start": "next start"
+    "lint": "eslint . --ext .cjs,.js,.jsx,.mjs,.ts,.tsx",
+    "prettier": "prettier --write --ignore-unknown .",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "start": "next start",
+    "test": "pnpm run lint && pnpm run prettier:check"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -18,7 +22,7 @@
     "react": "latest",
     "react-dom": "latest",
     "tailwindcss": "3.4.17",
-    "typescript": "5.7.3",
+    "typescript": "5.3.3",
     "use-debounce": "^10.0.4",
     "zod": "^3.24.1"
   },
@@ -26,6 +30,12 @@
     "@types/bcrypt": "^5.0.2",
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
-    "@types/react-dom": "19.0.3"
+    "@types/react-dom": "19.0.3",
+    "@vercel/style-guide": "5.2.0",
+    "eslint": "8.52.0",
+    "eslint-config-next": "14.0.0",
+    "eslint-config-prettier": "9.0.0",
+    "prettier": "3.0.3",
+    "prettier-plugin-tailwindcss": "0.5.4"
   }
 }
